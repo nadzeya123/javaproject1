@@ -1,6 +1,6 @@
 package lesson7.task1;
 
-public class Triangle extends GeometricShape
+public class Triangle implements GeometricShape
 {
     private double side1;
     private double side2;

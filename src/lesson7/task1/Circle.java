@@ -1,6 +1,6 @@
 package lesson7.task1;
 
-public class Circle extends GeometricShape
+public class Circle implements GeometricShape
 {
     private double radius;
 

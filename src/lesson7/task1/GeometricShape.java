@@ -1,7 +1,7 @@
 package lesson7.task1;
 
-public abstract class GeometricShape
+public interface GeometricShape
 {
-    public abstract double calculateArea();
-    public abstract double calculatePerimeter();
+    double calculateArea();
+    double calculatePerimeter();
 }

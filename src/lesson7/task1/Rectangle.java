@@ -1,7 +1,7 @@
 package lesson7.task1;
 
 
-public class Rectangle extends GeometricShape
+public class Rectangle implements GeometricShape
 {
     private double length;
     private double width;
