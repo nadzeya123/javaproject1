@@ -12,16 +12,16 @@ public class SignupScreen
 
         try
         {
-            if (login.length() < 20 && login.contains(" ") == false)
+            if (login.length() < 20 && !login.contains(" "))
             {
                 System.out.println("Login is correct.");
                 return;
             }
 
-            WrongLoginException exception1 = new WrongLoginException();
-            throw exception1;
+            WrongLoginException exception = new WrongLoginException();
+            throw exception;
         }
-        catch (WrongLoginException exception1)
+        catch (WrongLoginException exception)
         {
             System.out.println("Login error! Login must be less than 20 characters long without spaces.");
         }
@@ -33,17 +33,17 @@ public class SignupScreen
 
         try
         {
-            if (password.length() < 20 && password.contains(" ") == false)
+            if (password.length() < 20 && !password.contains(" "))
             {
                 System.out.println("Password is correct.");
                 return;
             }
 
-            WrongPasswordException exception2 = new WrongPasswordException();
-            throw exception2;
+            WrongPasswordException exception = new WrongPasswordException();
+            throw exception;
 
         }
-        catch (WrongPasswordException exception2)
+        catch (WrongPasswordException exception)
         {
             System.out.println("Password error! Password must be less than 20 characters long without spaces.");
         }
@@ -55,16 +55,16 @@ public class SignupScreen
 
         try
         {
-            if (password == confirmPassword)
+            if (password.equals(confirmPassword))
             {
                 System.out.println("Password is confirmed.");
                 return;
             }
 
-            WrongPasswordException exception3 = new WrongPasswordException();
-            throw exception3;
+            WrongPasswordException exception = new WrongPasswordException();
+            throw exception;
         }
-        catch (WrongPasswordException exception3)
+        catch (WrongPasswordException exception)
         {
             System.out.println("Confirm password error! Password and confirm password do not match.");
         }
